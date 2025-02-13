@@ -1,7 +1,7 @@
 export default function ValuesSection() {
   const values = [
     {
-      icon: "/icons/integrity.png", // Ganti dengan path ikon yang sesuai
+      icon: "/icons/integrity.png",
       title: "INTEGRITY",
       description:
         "Stick to high business ethics and transparency in every step, ensuring trust from partners and clients.",

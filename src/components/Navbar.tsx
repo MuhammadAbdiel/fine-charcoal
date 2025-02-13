@@ -4,42 +4,67 @@ import { Menu, X } from "lucide-react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsOpen(false);
+    }
+  };
+
   return (
-    <nav className="bg-gray-800 text-white fixed top-0 left-0 w-full shadow-md z-50">
+    <nav className="bg-black/80 backdrop-blur-md text-white fixed top-0 left-0 w-full shadow-md z-50 transition-all duration-300">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex md:gap-24 max-md:justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex items-center">
-            {/* <img src="/logo.png" alt="Logo" className="h-10 w-auto mr-2" /> */}
             <span className="font-semibold text-xl">Charcoal</span>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <a href="#" className="hover:text-gray-300">
+            <button
+              onClick={() => scrollToSection("hero")}
+              className="hover:text-gray-300"
+            >
               Home
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </button>
+            <button
+              onClick={() => scrollToSection("quality")}
+              className="hover:text-gray-300"
+            >
               About Us
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </button>
+            <button
+              onClick={() => scrollToSection("gallery")}
+              className="hover:text-gray-300"
+            >
               Gallery
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </button>
+            <button
+              onClick={() => scrollToSection("product")}
+              className="hover:text-gray-300"
+            >
               Product
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </button>
+            <button
+              onClick={() => scrollToSection("info")}
+              className="hover:text-gray-300"
+            >
               News
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </button>
+            <button
+              onClick={() => scrollToSection("founder")}
+              className="hover:text-gray-300"
+            >
               Team
-            </a>
-            <a href="#" className="hover:text-gray-300">
+            </button>
+            <button
+              onClick={() => scrollToSection("footer")}
+              className="hover:text-gray-300"
+            >
               Contact
-            </a>
+            </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -51,48 +76,50 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-900 text-white absolute top-16 left-0 w-full shadow-md transition-all duration-300">
-          <a
-            href="#"
-            className="block py-3 px-6 border-b border-gray-700 hover:bg-gray-700"
+        <div className="md:hidden bg-black/90 backdrop-blur-md text-white absolute top-16 left-0 w-full shadow-md transition-all duration-300">
+          <button
+            onClick={() => scrollToSection("hero")}
+            className="block py-3 px-6"
           >
             Home
-          </a>
-          <a
-            href="#"
-            className="block py-3 px-6 border-b border-gray-700 hover:bg-gray-700"
+          </button>
+          <button
+            onClick={() => scrollToSection("quality")}
+            className="block py-3 px-6"
           >
             About Us
-          </a>
-          <a
-            href="#"
-            className="block py-3 px-6 border-b border-gray-700 hover:bg-gray-700"
+          </button>
+          <button
+            onClick={() => scrollToSection("gallery")}
+            className="block py-3 px-6"
           >
             Gallery
-          </a>
-          <a
-            href="#"
-            className="block py-3 px-6 border-b border-gray-700 hover:bg-gray-700"
+          </button>
+          <button
+            onClick={() => scrollToSection("product")}
+            className="block py-3 px-6"
           >
             Product
-          </a>
-          <a
-            href="#"
-            className="block py-3 px-6 border-b border-gray-700 hover:bg-gray-700"
+          </button>
+          <button
+            onClick={() => scrollToSection("info")}
+            className="block py-3 px-6"
           >
             News
-          </a>
-          <a
-            href="#"
-            className="block py-3 px-6 border-b border-gray-700 hover:bg-gray-700"
+          </button>
+          <button
+            onClick={() => scrollToSection("founder")}
+            className="block py-3 px-6"
           >
             Team
-          </a>
-          <a href="#" className="block py-3 px-6 hover:bg-gray-700">
+          </button>
+          <button
+            onClick={() => scrollToSection("footer")}
+            className="block py-3 px-6 hover:bg-gray-700"
+          >
             Contact
-          </a>
+          </button>
         </div>
       )}
     </nav>
