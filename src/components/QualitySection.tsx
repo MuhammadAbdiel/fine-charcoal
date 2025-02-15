@@ -2,16 +2,19 @@ export default function QualitySection() {
   return (
     <section className="w-full bg-black text-white py-16 px-8 lg:px-24 flex flex-col lg:flex-row items-center">
       {/* Gambar di kiri */}
-      <div className="w-full lg:w-1/2 flex justify-center">
+      <div data-aos="fade-down" className="w-full lg:w-1/2 flex justify-center">
         <img
-          src="/your-image.jpg"
+          src="/coconut-charcoal.png"
           alt="Coconut Charcoal"
           className="max-w-md lg:max-w-lg"
         />
       </div>
 
       {/* Teks di kanan */}
-      <div className="w-full lg:w-1/2 mt-10 lg:mt-0 lg:pl-12">
+      <div
+        data-aos="fade-down"
+        className="w-full lg:w-1/2 mt-10 lg:mt-0 lg:pl-12"
+      >
         <h2 className="text-3xl sm:text-4xl font-semibold">
           High Quality of Charcoal Briquette
         </h2>

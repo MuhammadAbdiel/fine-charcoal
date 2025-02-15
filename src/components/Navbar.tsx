@@ -51,12 +51,12 @@ export default function Navbar() {
             >
               News
             </button>
-            <button
+            {/* <button
               onClick={() => scrollToSection("founder")}
               className="hover:text-gray-300"
             >
               Team
-            </button>
+            </button> */}
             <button
               onClick={() => scrollToSection("footer")}
               className="hover:text-gray-300"
@@ -108,12 +108,12 @@ export default function Navbar() {
           >
             News
           </button>
-          <button
+          {/* <button
             onClick={() => scrollToSection("founder")}
             className="block py-3 px-6"
           >
             Team
-          </button>
+          </button> */}
           <button
             onClick={() => scrollToSection("footer")}
             className="block py-3 px-6 hover:bg-gray-700"

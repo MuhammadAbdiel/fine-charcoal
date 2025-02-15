@@ -28,7 +28,10 @@ export default function ValuesSection() {
 
   return (
     <section className="w-full bg-black text-white py-16 px-8 lg:px-24">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+      <div
+        data-aos="fade-down"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center"
+      >
         {values.map((item, index) => (
           <div key={index} className="flex flex-col items-center">
             <img src={item.icon} alt={item.title} className="h-16 mb-4" />
