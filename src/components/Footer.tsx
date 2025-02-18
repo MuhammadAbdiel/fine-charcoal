@@ -1,15 +1,15 @@
 import { Facebook, Linkedin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="w-full bg-black text-white py-10 px-8 lg:px-24">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Bagian Kiri - Informasi Kontak */}
         <div>
-          <p className="text-lg font-medium">
-            Entrust Global Partnership to Us, Trusted Exporter of Coconut
-            Briquette Charcoal from Indonesia
-          </p>
+          <p className="text-lg font-medium">{t("footerTitle")}</p>
           <p className="mt-4 text-gray-300">
             Jl. Kesehatan, Gg Keluarga Bersama No 45, Kalimantan Barat,
             Pontianak, Indonesia.
@@ -20,11 +20,8 @@ export default function Footer() {
 
         {/* Bagian Kanan - Social Media */}
         <div className="text-right">
-          <h3 className="text-lg font-medium">Follow Us</h3>
-          <p className="mt-2 text-gray-300">
-            Follow us on social media, and some updates about company
-            information
-          </p>
+          <h3 className="text-lg font-medium">{t("followUs")}</h3>
+          <p className="mt-2 text-gray-300">{t("followUsDesc")}</p>
           <div className="mt-4 flex justify-end space-x-4">
             <a
               href="#"

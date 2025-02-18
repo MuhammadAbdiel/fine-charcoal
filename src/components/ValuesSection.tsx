@@ -1,28 +1,28 @@
+import { useTranslation } from "react-i18next";
+
 export default function ValuesSection() {
+  const { t } = useTranslation();
+
   const values = [
     {
       icon: "/icons/integrity.png",
-      title: "INTEGRITY",
-      description:
-        "Stick to high business ethics and transparency in every step, ensuring trust from partners and clients.",
+      title: t("firstValue"),
+      description: t("firstValueDesc"),
     },
     {
       icon: "/icons/commitment.png",
-      title: "COMMITMENT",
-      description:
-        "Dedicated to providing the best service, we are focused on long-term success with full support to our partners and customers.",
+      title: t("secondValue"),
+      description: t("secondValueDesc"),
     },
     {
       icon: "/icons/trusted.png",
-      title: "TRUSTED",
-      description:
-        "Maintaining a solid reputation through consistent service and fulfilling promises, we ensure every transaction runs safely and smoothly.",
+      title: t("thirdValue"),
+      description: t("thirdValueDesc"),
     },
     {
       icon: "/icons/credibility.png",
-      title: "CREDIBILITY",
-      description:
-        "Deliver reliable and efficient services with high standards of professionalism, providing solutions tailored to your business needs.",
+      title: t("fourthValue"),
+      description: t("fourthValueDesc"),
     },
   ];
 
@@ -35,7 +35,7 @@ export default function ValuesSection() {
         {values.map((item, index) => (
           <div key={index} className="flex flex-col items-center">
             <img src={item.icon} alt={item.title} className="h-16 mb-4" />
-            <h3 className="text-xl font-semibold">{item.title}</h3>
+            <h3 className="text-xl font-semibold uppercase">{item.title}</h3>
             <p className="mt-2 text-gray-300 text-lg">{item.description}</p>
           </div>
         ))}
