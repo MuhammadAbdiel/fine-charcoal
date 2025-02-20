@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
   const { t, i18n } = useTranslation();
 
   const scrollToSection = (id: string) => {
@@ -14,9 +15,9 @@ export default function Navbar() {
     }
   };
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "id" : "en";
-    i18n.changeLanguage(newLang);
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+    setIsLangOpen(false);
   };
 
   return (
@@ -69,14 +70,39 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Toggle Button Bahasa di sebelah kanan */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center space-x-1 hover:text-gray-300"
-            >
-              <Globe size={20} />
-              <span className="uppercase">{i18n.language}</span>
-            </button>
+            {/* Dropdown Bahasa di sebelah kanan */}
+            <div className="relative">
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center space-x-1 hover:text-gray-300 focus:outline-none"
+              >
+                <Globe size={20} />
+                <span className="uppercase">{i18n.language}</span>
+                <ChevronDown size={16} />
+              </button>
+              {isLangOpen && (
+                <div className="absolute right-0 mt-2 w-32 bg-white text-black rounded-md shadow-lg z-50">
+                  <button
+                    onClick={() => changeLanguage("en")}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => changeLanguage("id")}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                  >
+                    Indonesian
+                  </button>
+                  <button
+                    onClick={() => changeLanguage("ar")}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                  >
+                    العربية
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Navigation */}
@@ -129,14 +155,39 @@ export default function Navbar() {
           >
             {t("contact")}
           </button>
-          {/* Toggle Button Bahasa pada menu mobile */}
-          <button
-            onClick={toggleLanguage}
-            className="flex items-center space-x-1 py-3 px-6 hover:bg-gray-700"
-          >
-            <Globe size={20} />
-            <span>{i18n.language.toUpperCase()}</span>
-          </button>
+          {/* Dropdown Bahasa pada menu mobile */}
+          <div className="relative">
+            <button
+              onClick={() => setIsLangOpen(!isLangOpen)}
+              className="flex items-center space-x-1 w-full px-6 py-3 hover:bg-gray-700 focus:outline-none"
+            >
+              <Globe size={20} />
+              <span className="uppercase">{i18n.language}</span>
+              <ChevronDown size={16} />
+            </button>
+            {isLangOpen && (
+              <div className="w-full bg-white text-black rounded-md shadow-lg z-50">
+                <button
+                  onClick={() => changeLanguage("en")}
+                  className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                >
+                  English
+                </button>
+                <button
+                  onClick={() => changeLanguage("id")}
+                  className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                >
+                  Indonesian
+                </button>
+                <button
+                  onClick={() => changeLanguage("ar")}
+                  className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                >
+                  العربية
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       )}
     </nav>
