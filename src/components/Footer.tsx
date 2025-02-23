@@ -11,8 +11,8 @@ export default function Footer() {
         <div>
           <p className="text-lg font-medium">{t("footerTitle")}</p>
           <p className="mt-4 text-gray-300">
-            Jl. Kesehatan, Gg Keluarga Bersama No 45, Kalimantan Barat,
-            Pontianak, Indonesia.
+            Ruko Canadian Broadway Kota Wisata Cibubur, Jalan Canadian Broadway
+            Blok Cbb No. 10, Limus Nunggal, Limusnunggal, Cileungsi
           </p>
           <p className="mt-2 text-gray-300">+62 851 7683 1582</p>
           <p className="mt-2 text-gray-300">sales.nitrocharcoal@gmail.com</p>
