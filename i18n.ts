@@ -58,6 +58,10 @@ const resources = {
       followUs: "Follow Us",
       followUsDesc:
         "Follow us on social media, and some updates about company information",
+      copyright:
+        "Copyright © 2025 Indonesian Coconut Charcoal Briquette Exporter for Shisha & BBQ. All Rights Reserved.",
+      address:
+        "Kesehatan Street, Keluarga Bersama Alley Number 45, West Kalimantan, Pontianak, Indonesia.",
     },
   },
   id: {
@@ -115,6 +119,10 @@ const resources = {
       followUs: "Ikuti Kami",
       followUsDesc:
         "Ikuti kami di media sosial, dan beberapa pembaruan tentang informasi perusahaan",
+      copyright:
+        "Hak Cipta © 2025 Eksportir Briket Arang Kelapa Indonesia untuk Shisha & BBQ. Seluruh Hak Dilindungi.",
+      address:
+        "Jl. Kesehatan, Gg Keluarga Bersama No 45, Kalimantan Barat, Pontianak, Indonesia.",
     },
   },
   ar: {
@@ -172,6 +180,10 @@ const resources = {
       followUs: "تابعنا",
       followUsDesc:
         "تابعنا على وسائل التواصل الاجتماعي، وآخر التحديثات عن معلومات الشركة",
+      copyright:
+        "حقوق النشر © 2025 مصدر فحم جوز الهند الإندونيسي للشيشة والشواء. كل الحقوق محفوظة.",
+      address:
+        "شارع الصحة، زقاق العائلة المتحدة رقم 45، كاليمانتان الغربية، بونتياناك، إندونيسيا.",
     },
   },
 };

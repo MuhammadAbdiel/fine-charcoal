@@ -41,8 +41,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="mt-8 text-center text-gray-400 text-sm">
-        Copyright © 2025 Indonesian Coconut Charcoal Briquette Exporter for
-        Shisha & BBQ. All Rights Reserved.
+        {t("copyright")}
       </div>
     </footer>
   );
