@@ -11,42 +11,42 @@ import ValuesSection from "./components/ValuesSection";
 import WhatsAppButton from "./components/WhatsAppButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import axios from "axios";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import { Dashboard } from "./pages/Dashboard";
+import axios from "axios";
+import { Dashboard } from "./pages/Dashboard";
 
 export default function App() {
   useEffect(() => {
     AOS.init({ duration: 2000, easing: "ease-out" });
   }, []);
 
-  // useEffect(() => {
-  //   const trackVisitor = async () => {
-  //     try {
-  //       const visitorData = {
-  //         ip: await fetch("https://api.ipify.org?format=json")
-  //           .then((res) => res.json())
-  //           .then((data) => data.ip),
-  //         userAgent: navigator.userAgent,
-  //         pageVisited: window.location.pathname,
-  //       };
+  useEffect(() => {
+    const trackVisitor = async () => {
+      try {
+        const visitorData = {
+          ip: await fetch("https://api.ipify.org?format=json")
+            .then((res) => res.json())
+            .then((data) => data.ip),
+          userAgent: navigator.userAgent,
+          pageVisited: window.location.pathname,
+        };
 
-  //       await axios.post(
-  //         "https://indonesiahalalpartner.com/save_visitor.php",
-  //         visitorData,
-  //         {
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //         }
-  //       );
-  //     } catch (err) {
-  //       console.error("Error tracking visitor:", err);
-  //     }
-  //   };
+        await axios.post(
+          "https://finecharcoal.com/save_visitor.php",
+          visitorData,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+      } catch (err) {
+        console.error("Error tracking visitor:", err);
+      }
+    };
 
-  //   trackVisitor();
-  // }, []);
+    trackVisitor();
+  }, []);
 
   return (
     <BrowserRouter>
@@ -84,7 +84,7 @@ export default function App() {
             </>
           }
         />
-        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );
