@@ -56,7 +56,12 @@ export default function ProductOptions() {
 
       {/* Button Download */}
       <div data-aos="fade-down" className="mt-10 flex justify-center">
-        <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 flex items-center gap-2 rounded-lg font-semibold transition">
+        <button
+          onClick={() => {
+            window.open("/catalog/CharcoalCatalog.pdf");
+          }}
+          className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 flex items-center gap-2 rounded-lg font-semibold transition"
+        >
           <Download size={20} />
           {t("downloadCatalog")}
         </button>
