@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="flex max-md:justify-between gap-24 items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="font-semibold text-xl">Charcoal</span>
+            <img src="/logo.png" alt="logo" className="bg-white" width={90} />
           </div>
 
           {/* Desktop Navigation */}

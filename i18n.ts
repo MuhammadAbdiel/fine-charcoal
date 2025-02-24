@@ -38,9 +38,9 @@ const resources = {
         "With a reputation as a major provider of Charcoal Briquettes, we guarantee high quality in every product we offer. Our Charcoal Briquette are produced from the best natural raw materials and go through a strict quality control process.",
       ctaProduct:
         "Click the image to see further specifications and download to see more details.",
-      firstProduct: "Superior Shisha Briquette",
-      secondProduct: "Extra Shisha Briquette",
-      thirdProduct: "Premium Shisha Briquette",
+      firstProduct: "Super Premium Shisha Briquette",
+      secondProduct: "Premium Shisha Briquette",
+      thirdProduct: "Standard Shisha Briquette",
       downloadCatalog: "DOWNLOAD CATALOG",
       newsTitle: "EXPLORE COMPLETE INFORMATION",
       newsDesc:
@@ -100,9 +100,9 @@ const resources = {
         "Dengan reputasi sebagai penyedia utama Briket Arang, kami menjamin kualitas tinggi dalam setiap produk yang kami tawarkan. Briket Arang kami diproduksi dari bahan baku alami terbaik dan melalui proses kontrol kualitas yang ketat.",
       ctaProduct:
         "Klik gambar untuk melihat spesifikasi lebih lanjut dan unduh untuk melihat detail lebih lanjut.",
-      firstProduct: "Briket Shisha Superior",
-      secondProduct: "Briket Shisha Extra",
-      thirdProduct: "Briket Shisha Premium",
+      firstProduct: "Briket Shisha Super Premium",
+      secondProduct: "Briket Shisha Premium",
+      thirdProduct: "Briket Shisha Standar",
       downloadCatalog: "UNDUH KATALOG",
       newsTitle: "EKSPLORASI INFORMASI LENGKAP",
       newsDesc:

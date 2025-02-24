@@ -6,10 +6,13 @@ export default function GallerySection() {
   const [zoomedIndex, setZoomedIndex] = useState<number | null>(null);
 
   const galleryImages = [
-    "/gallery-1.jpeg", // Ganti dengan path gambar
-    "/gallery-2.png",
-    "/gallery-3.png",
-    "/gallery-4.png",
+    // "/gallery-1.jpeg",
+    // "/gallery-2.png",
+    // "/gallery-3.png",
+    // "/gallery-4.png",
+    "/gallery-5.png",
+    "/gallery-6.png",
+    "/gallery-7.png",
   ];
 
   return (
@@ -26,7 +29,8 @@ export default function GallerySection() {
       </p>
 
       {/* Grid Gambar */}
-      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {/* <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"> */}
         {galleryImages.map((image, index) => (
           <div
             data-aos="fade-down"

@@ -6,15 +6,18 @@ export default function ProductOptions() {
 
   const products = [
     {
-      image: "/superior.png",
+      // image: "/superior.png",
+      image: "/product-1.png",
       title: t("firstProduct"),
     },
     {
-      image: "/extra.png",
+      // image: "/extra.png",
+      image: "/product-2.png",
       title: t("secondProduct"),
     },
     {
-      image: "/premium.png",
+      // image: "/premium.png",
+      image: "/product-3.png",
       title: t("thirdProduct"),
     },
   ];

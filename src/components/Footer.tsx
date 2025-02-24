@@ -14,7 +14,8 @@ export default function Footer() {
             Ruko Canadian Broadway Kota Wisata Cibubur, Jalan Canadian Broadway
             Blok Cbb No. 10, Limus Nunggal, Limusnunggal, Cileungsi
           </p>
-          <p className="mt-2 text-gray-300">+62 851 7683 1582</p>
+          <p className="mt-2 text-gray-300">+62 895 1549 9962 : Admin 1</p>
+          <p className="mt-2 text-gray-300">+62 851 7988 9913 : Admin 2</p>
           <p className="mt-2 text-gray-300">sales.nitrocharcoal@gmail.com</p>
         </div>
 
